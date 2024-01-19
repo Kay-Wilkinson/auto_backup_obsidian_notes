@@ -25,7 +25,7 @@ crontab -e
 In the crontab file, add a line that specifies when and how often the script should run. The cron tab entry should also include a path to a virtualenv so the script can run with all required dependencies:
 
 ```bash
-0 */3 * * * /Users/{example_name}/.virtualenvs/backup_notes/bin/activate && /Users/{example_name}projects/backup_notes/auto_backup_obsidian_notes/auto_backup_notes.py
+0 */3 * * * /bin/bash -c 'source /Users/{example_name}/.virtualenvs/backup_notes/bin/activate && /Users/{example_name}projects/backup_notes/auto_backup_obsidian_notes/auto_backup_notes.py'
 ```
 
 Each asterisk corresponds to (in order): minute, hour, day of the month, month, day of the week. You can use numbers or special characters like * (any value) or / (every n minutes/hours/etc.).
@@ -33,7 +33,7 @@ Each asterisk corresponds to (in order): minute, hour, day of the month, month, 
 For example, to run the script every day at 5 PM, you would add:
 
 ```bash
-0 17 * * * /path/to/your/auto_backup_notes.py
+0 17 * * * /bin/bash -c 'source /Users/{example_name}/.virtualenvs/backup_notes/bin/activate && /Users/{example_name}projects/backup_notes/auto_backup_obsidian_notes/auto_backup_notes.py'
 ```
 
 Save and Exit: 
