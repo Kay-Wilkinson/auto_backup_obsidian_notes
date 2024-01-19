@@ -1,6 +1,10 @@
 # auto_backup_obsidian_notes
-This is a small script and cronjob to backup obsidian notes on a set schedule.
+This is a small script and cronjob to backup Obsidian notes on a set schedule.
+Obsidian-Git plugin will handle tracking changes to a repository attached to your Obsidian Vault. This script just automates committing these changes to auto backup notes.
 
+# Requires:
+Obsidian: https://obsidian.md/
+Osidian-Git plugin: https://publish.obsidian.md/git-doc/Start+here
 
 # Make script executable:
 
